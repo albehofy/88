@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Café Menu</title>
+    <title>Eighty-eight Café Menu</title>
     <base href="/88/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .menu-section {
             scroll-margin-top: 100px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border-left: 4px solid #d97706;
+            transition: all 0.3s ease;
         }
 
         .menu-item:hover {
@@ -27,36 +33,65 @@
             direction: rtl;
             text-align: right;
         }
+
+        /* Price tags */
+        .menu-item span {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        #mobile-menu {
+            position: absolute;
+            right: 0;
+        }
     </style>
 </head>
 
 <body class="bg-amber-50 font-sans">
     <!-- Header -->
-    <header class="bg-amber-900 text-white sticky top-0 z-10 shadow-lg">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex justify-between items-center">
-                <h1 class="text-3xl font-bold">Eighty-eight</h1>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#croissants" class="hover:text-amber-200 transition">Croissants</a>
-                    <a href="#patties" class="hover:text-amber-200 transition">Patties</a>
-                    <a href="#other" class="hover:text-amber-200 transition">Other</a>
-                    <a href="#coffee" class="hover:text-amber-200 transition">Coffee</a>
-                    <a href="#hot-drinks" class="hover:text-amber-200 transition">Hot Drinks</a>
+    <header class="bg-amber-800 text-white sticky top-0 z-50 shadow-xl">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-600 text-2xl font-bold">
+                        88
+                    </div>
+                    <h1 class="text-3xl font-bold tracking-tight">Eighty-eight</h1>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <div class="hidden md:flex space-x-8">
+                    <a href="#croissants"
+                        class="font-medium hover:text-amber-200 transition duration-300 py-2 px-1 border-b-2 border-transparent hover:border-amber-300">Croissants</a>
+                    <a href="#patties"
+                        class="font-medium hover:text-amber-200 transition duration-300 py-2 px-1 border-b-2 border-transparent hover:border-amber-300">Patties</a>
+                    <a href="#other"
+                        class="font-medium hover:text-amber-200 transition duration-300 py-2 px-1 border-b-2 border-transparent hover:border-amber-300">Other</a>
+                    <a href="#coffee"
+                        class="font-medium hover:text-amber-200 transition duration-300 py-2 px-1 border-b-2 border-transparent hover:border-amber-300">Coffee</a>
+                    <a href="#hot-drinks"
+                        class="font-medium hover:text-amber-200 transition duration-300 py-2 px-1 border-b-2 border-transparent hover:border-amber-300">Hot
+                        Drinks</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-2xl focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-amber-800 pb-4 px-4">
-            <div class="flex flex-col space-y-3">
-                <a href="#croissants" class="text-white hover:text-amber-200 py-2">Croissants</a>
-                <a href="#patties" class="text-white hover:text-amber-200 py-2">Patties</a>
-                <a href="#other" class="text-white hover:text-amber-200 py-2">Other</a>
-                <a href="#coffee" class="text-white hover:text-amber-200 py-2">Coffee</a>
-                <a href="#hot-drinks" class="text-white hover:text-amber-200 py-2">Hot Drinks</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-800 pb-6 px-4 shadow-inner">
+            <div class="flex flex-col space-y-4">
+                <a href="#croissants"
+                    class="text-white hover:text-amber-200 py-3 px-2 border-l-4 border-transparent hover:border-amber-300 transition">Croissants</a>
+                <a href="#patties"
+                    class="text-white hover:text-amber-200 py-3 px-2 border-l-4 border-transparent hover:border-amber-300 transition">Patties</a>
+                <a href="#other"
+                    class="text-white hover:text-amber-200 py-3 px-2 border-l-4 border-transparent hover:border-amber-300 transition">Other</a>
+                <a href="#coffee"
+                    class="text-white hover:text-amber-200 py-3 px-2 border-l-4 border-transparent hover:border-amber-300 transition">Coffee</a>
+                <a href="#hot-drinks"
+                    class="text-white hover:text-amber-200 py-3 px-2 border-l-4 border-transparent hover:border-amber-300 transition">Hot
+                    Drinks</a>
             </div>
         </div>
     </header>
@@ -80,7 +115,7 @@
         </div>
     </section>
     <!-- Menu Navigation -->
-    <!-- <div class="bg-white sticky top-20 z-10 shadow-md">
+    <div class="bg-white sticky top-20 z-10 shadow-md">
         <div class="container mx-auto px-4 py-3 overflow-x-auto">
             <div class="flex space-x-2 md:space-x-4 whitespace-nowrap">
                 <button data-category="croissants"
@@ -105,7 +140,7 @@
                 </button>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
@@ -119,11 +154,11 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Plain Croissant -->
-                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                <div class="menu-item rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Plain Croissant</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">50
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">50
                                 EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">سادة</p>
@@ -663,7 +698,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Delicious Café</h3>
+                    <h3 class="text-xl font-bold mb-4">Eighty-eight Café</h3>
                     <p class="mb-4">Freshly baked croissants and premium coffee drinks served with love.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-white hover:text-amber-200"><i class="fab fa-facebook-f"></i></a>
@@ -688,7 +723,7 @@
                 </div>
             </div>
             <div class="border-t border-amber-800 mt-8 pt-8 text-center">
-                <p>&copy; 2023 Delicious Café. All rights reserved.</p>
+                <p>&copy; 2025 Eighty-eight. All rights reserved.</p>
             </div>
         </div>
     </footer>
