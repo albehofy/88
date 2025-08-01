@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Café Menu</title>
+    <base href="/88/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .menu-section {
             scroll-margin-top: 100px;
         }
+
         .menu-item:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
+
         .active-category {
             background-color: #f59e0b;
             color: white;
         }
+
         .arabic-text {
             direction: rtl;
             text-align: right;
         }
     </style>
 </head>
+
 <body class="bg-amber-50 font-sans">
     <!-- Header -->
     <header class="bg-amber-900 text-white sticky top-0 z-10 shadow-lg">
@@ -42,7 +48,7 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-amber-800 pb-4 px-4">
             <div class="flex flex-col space-y-3">
@@ -56,15 +62,16 @@
     </header>
 
     <!-- Hero Section -->
-        <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="bg-amber-700 text-white py-16">
         <div class="container mx-auto px-4 text-center">
-                        <svg class="mx-auto w-64 h-64 mb-6" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="90" fill="#F59E0B" stroke="#78350F" stroke-width="4"/>
-                <path d="M50 100 Q100 180 150 100" stroke="#78350F" stroke-width="8" stroke-linecap="round"/>
-                <path d="M60 100 Q100 160 140 100" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
-                <path d="M70 100 Q100 140 130 100" stroke="#78350F" stroke-width="4" stroke-linecap="round"/>
-                <text x="100" y="80" font-family="Arial" font-size="36" fill="#78350F" text-anchor="middle" font-weight="bold">88</text>
+            <svg class="mx-auto w-64 h-64 mb-6" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="90" fill="#F59E0B" stroke="#78350F" stroke-width="4" />
+                <path d="M50 100 Q100 180 150 100" stroke="#78350F" stroke-width="8" stroke-linecap="round" />
+                <path d="M60 100 Q100 160 140 100" stroke="#78350F" stroke-width="6" stroke-linecap="round" />
+                <path d="M70 100 Q100 140 130 100" stroke="#78350F" stroke-width="4" stroke-linecap="round" />
+                <text x="100" y="80" font-family="Arial" font-size="36" fill="#78350F" text-anchor="middle"
+                    font-weight="bold">88</text>
             </svg>
             <div class="flex flex-col items-center space-y-2">
                 <h3 class="text-3xl font-bold text-amber-100">Our Delicious Menu</h3>
@@ -92,19 +99,24 @@
     <div class="bg-white sticky top-20 z-10 shadow-md">
         <div class="container mx-auto px-4 py-3 overflow-x-auto">
             <div class="flex space-x-2 md:space-x-4 whitespace-nowrap">
-                <button data-category="croissants" class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
+                <button data-category="croissants"
+                    class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Croissants
                 </button>
-                <button data-category="patties" class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
+                <button data-category="patties"
+                    class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Patties
                 </button>
-                <button data-category="other" class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
+                <button data-category="other"
+                    class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Other
                 </button>
-                <button data-category="coffee" class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
+                <button data-category="coffee"
+                    class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Coffee
                 </button>
-                <button data-category="hot-drinks" class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
+                <button data-category="hot-drinks"
+                    class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Hot Drinks
                 </button>
             </div>
@@ -120,190 +132,207 @@
                 <h2 class="text-3xl font-bold mx-4 text-amber-900">Croissants</h2>
                 <div class="h-1 bg-amber-500 flex-grow"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Plain Croissant -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Plain Croissant</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">50 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">50
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">سادة</p>
                     </div>
                 </div>
-                
+
                 <!-- Roumy Cheese -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Roumy Cheese</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">55 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">55
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">رومي</p>
                     </div>
                 </div>
-                
+
                 <!-- Cheese & Olives -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Cheese & Olives</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">جبنة وزيتون</p>
                     </div>
                 </div>
-                
+
                 <!-- Cheddar -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Cheddar</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">85 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">85
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">شيدر</p>
                     </div>
                 </div>
-                
+
                 <!-- Mixed Cheddar -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Mixed Cheddar</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">85 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">85
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">ميكس شيدر</p>
                     </div>
                 </div>
-                
+
                 <!-- Smoked Turkey -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Smoked Turkey</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">90 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">90
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">تركي مدخن</p>
                     </div>
                 </div>
-                
+
                 <!-- Pastrami -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Pastrami</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">95 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">95
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">بسطرمة</p>
                     </div>
                 </div>
-                
+
                 <!-- Shawarma -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Shawarma</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">75 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">75
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">شاورما</p>
                     </div>
                 </div>
-                
+
                 <!-- Shawarma & Cheese -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Shawarma & Cheese</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">شاورما جبنة</p>
                     </div>
                 </div>
-                
+
                 <!-- Pistachio -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Pistachio</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">135 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">135
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">فستق</p>
                     </div>
                 </div>
-                
+
                 <!-- Nutella -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Nutella</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">نوتيلا</p>
                     </div>
                 </div>
-                
+
                 <!-- Lotus -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Lotus</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">115 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">115
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">لوتس</p>
                     </div>
                 </div>
-                
+
                 <!-- Rocher -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Rocher</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">115 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">115
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">روشية</p>
                     </div>
                 </div>
-                
+
                 <!-- Bueno -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Bueno</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">135 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">135
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">بوينو</p>
                     </div>
                 </div>
-                
+
                 <!-- Mixed Chocolate -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Mixed Chocolate</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">ميكس شوكليت</p>
                     </div>
                 </div>
-                
+
                 <!-- Kinder -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Kinder</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">115 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">115
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">كيندر</p>
                     </div>
                 </div>
-                
+
                 <!-- Mixed Sweet -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Mixed Sweet</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">ميكس سويت</p>
                     </div>
@@ -318,36 +347,39 @@
                 <h2 class="text-3xl font-bold mx-4 text-amber-900">Patties</h2>
                 <div class="h-1 bg-amber-500 flex-grow"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Sausage Pattie -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Sausage Pattie</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">65 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">65
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">باتيه سوسيس</p>
                     </div>
                 </div>
-                
+
                 <!-- Turkey Pattie -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Turkey Pattie</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">55 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">55
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">باتيه رومي</p>
                     </div>
                 </div>
-                
+
                 <!-- White Cheese Pattie -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">White Cheese Pattie</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">55 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">55
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">باتيه جبنة بيضا</p>
                     </div>
@@ -362,14 +394,15 @@
                 <h2 class="text-3xl font-bold mx-4 text-amber-900">Other</h2>
                 <div class="h-1 bg-amber-500 flex-grow"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- English Cake -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">English Cake</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">150
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">إنجليش كيك</p>
                     </div>
@@ -384,7 +417,7 @@
                 <h2 class="text-3xl font-bold mx-4 text-amber-900">Coffee Menu</h2>
                 <div class="h-1 bg-amber-500 flex-grow"></div>
             </div>
-            
+
             <div class="overflow-x-auto">
                 <table class="w-full bg-white rounded-lg shadow-md">
                     <thead class="bg-amber-100">
@@ -477,148 +510,162 @@
                 <h2 class="text-3xl font-bold mx-4 text-amber-900">Hot Drinks Menu</h2>
                 <div class="h-1 bg-amber-500 flex-grow"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Flat White -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Flat White</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Tea -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Tea</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">50 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">50
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Flavored Tea -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Flavored Tea</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Hot Chocolate -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Hot Chocolate</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">100 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">100
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Oreo Hot -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Oreo Hot</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">100 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">100
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Kinder Hot Chocolate -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Kinder Hot Chocolate</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Nutella Hot Chocolate -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Nutella Hot Chocolate</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">110 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">110
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Hot Cider -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Hot Cider</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">80 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">80
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Herbal Tea -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Herbal Tea</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60
+                                EGP</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Anise -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Anise</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">يانسون</p>
                     </div>
                 </div>
-                
+
                 <!-- Hibiscus -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Hibiscus</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">65 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">65
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">كركديه</p>
                     </div>
                 </div>
-                
+
                 <!-- Mint -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Mint</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">70 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">70
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">نعناع</p>
                     </div>
                 </div>
-                
+
                 <!-- Cinnamon -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Cinnamon</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">60
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">قرفة</p>
                     </div>
                 </div>
-                
+
                 <!-- Ginger -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Ginger</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">75 EGP</span>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">75
+                                EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">زنجبيل</p>
                     </div>
@@ -671,14 +718,14 @@
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
         // Category navigation
         const categoryButtons = document.querySelectorAll('.category-btn');
-        
+
         categoryButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
@@ -687,11 +734,11 @@
                     btn.classList.remove('bg-amber-500', 'text-white');
                     btn.classList.add('bg-amber-100', 'text-amber-800');
                 });
-                
+
                 // Add active class to clicked button
                 button.classList.remove('bg-amber-100', 'text-amber-800');
                 button.classList.add('bg-amber-500', 'text-white');
-                
+
                 // Scroll to the corresponding section
                 const category = button.dataset.category;
                 document.getElementById(category).scrollIntoView({
@@ -702,7 +749,7 @@
 
         // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('hidden');
@@ -710,7 +757,7 @@
                 backToTopButton.classList.add('hidden');
             }
         });
-        
+
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -721,23 +768,23 @@
         // Highlight current section in navigation
         const sections = document.querySelectorAll('.menu-section');
         const navLinks = document.querySelectorAll('header a, .category-btn');
-        
+
         window.addEventListener('scroll', () => {
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active-category');
                 link.classList.remove('text-amber-200');
-                
+
                 if (link.classList.contains('category-btn')) {
                     if (link.dataset.category === current) {
                         link.classList.add('active-category');
@@ -755,4 +802,5 @@
         });
     </script>
 </body>
+
 </html>
