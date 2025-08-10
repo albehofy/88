@@ -219,6 +219,10 @@
                     class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Patties
                 </button>
+                <button data-category="sandwiches"
+                    class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
+                    Sandwiches
+                </button>
                 <button data-category="other"
                     class="category-btn px-4 py-2 rounded-full bg-amber-100 text-amber-800 font-medium hover:bg-amber-200 transition">
                     Other
@@ -311,7 +315,7 @@
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Cheddar</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">85
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">90
                                 EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">شيدر</p>
@@ -323,7 +327,7 @@
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Mixed Cheddar</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">85
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">90
                                 EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">ميكس شيدر</p>
@@ -335,7 +339,7 @@
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-gray-800">Smoked Turkey</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">90
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">95
                                 EGP</span>
                         </div>
                         <p class="text-gray-600 mt-2 arabic-text">تركي مدخن</p>
@@ -527,6 +531,37 @@
             </div>
         </section>
 
+        <!-- Sandwiches Section -->
+        <section id="sandwiches" class="menu-section mb-16">
+            <div class="section-header">
+                <img src="./assets/5.jpeg"
+                    alt="Sandwiches" class="section-image" />
+                <h2 class="text-4xl font-bold">Sandwiches</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bacon Turkey -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-gray-800">Bacon Turkey</h3>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">165 EGP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chicken Mozzarella -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-gray-800">Chicken Mozzarella</h3>
+                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">195 EGP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Other Section -->
         <section id="other" class="menu-section mb-16">
             <div class="section-header">
@@ -577,6 +612,11 @@
                             <td class="py-3 px-4">Espresso</td>
                             <td class="py-3 px-4 text-center">95 EGP</td>
                             <td class="py-3 px-4 text-center">110 EGP</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-amber-50">
+                            <td class="py-3 px-4">Flat White</td>
+                            <td class="py-3 px-4 text-center">140 EGP</td>
+                            <td class="py-3 px-4 text-center"></td>
                         </tr>
                         <tr class="border-b border-gray-200 hover:bg-amber-50">
                             <td class="py-3 px-4">Dark American Coffee</td>
@@ -657,16 +697,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Flat White -->
-                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-gray-800">Flat White</h3>
-                            <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">120
-                                EGP</span>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Tea -->
                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
@@ -1613,6 +1644,14 @@
                 <div class="menu-item">
                     <div class="p-6">
                         <div class="flex justify-between">
+                            <h3>Ice flat white</h3>
+                            <span>175 EGP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="p-6">
+                        <div class="flex justify-between">
                             <h3>Iced Tea Flavor</h3>
                             <span>145 EGP</span>
                         </div>
@@ -1820,7 +1859,7 @@
                     <div class="p-6">
                         <div class="flex justify-between">
                             <h3>Extra Caramel</h3>
-                            <span>35 EGP</span>
+                            <span>30 EGP</span>
                         </div>
                     </div>
                 </div>
@@ -1891,6 +1930,9 @@
                         </li>
                         <li>
                             <a href="#patties" class="hover:text-amber-200 transition">Patties</a>
+                        </li>
+                        <li>
+                            <a href="#sandwiches" class="hover:text-amber-200 transition">Sandwiches</a>
                         </li>
                         <li>
                             <a href="#coffee" class="hover:text-amber-200 transition">Coffee</a>
